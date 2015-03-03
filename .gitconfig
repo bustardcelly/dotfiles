@@ -5,12 +5,21 @@
 
 	# View the current working tree status using the short format
 	s = status -s
+	st = status -s
+
+	# Checkout branch
+	co = checkout
+	cob = checkout -b
+	cor = checkout -b $1 origin/$1
 
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
 	# `git di $number` shows the diff between the state `$number` revisions ago and the current state
 	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
+
+	# difftool
+	dt = !git difftool $1
 
 	# Pull in remote changes for the current repository and all its submodules
 	p = !"git pull; git submodule foreach git pull origin master"
@@ -27,6 +36,7 @@
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
 	branches = branch -a
+	ba = branch -a
 	remotes = remote -v
 
 	# Amend the currently staged files to the latest commit
@@ -59,6 +69,9 @@
 
 	# List contributors with number of commits
 	contributors = shortlog --summary --numbered
+
+	# Unadd file (or all) for pre-commit
+	unadd = reset HEAD
 
 	# Merge GitHub pull request on top of the `master` branch
 	mpr = "!f() { \

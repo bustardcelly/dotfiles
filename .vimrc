@@ -1,6 +1,6 @@
 " Use the Solarized Dark theme
-set background=dark
-colorscheme solarized
+set background=light
+colorscheme lucius
 let g:solarized_termtrans=1
 
 " Make Vim more useful
@@ -103,4 +103,28 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
-endif
+endi
+
+" Spaces instead of tabs
+set expandtab
+
+" vim-javascript settings
+let g:javascript_enable_domhtmlcss=1
+
+" syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+call plug#begin()
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'pangloss/vim-javascript'
+Plug 'scrooloose/syntastic'
+Plug 'flazz/vim-colorschemes'
+call plug#end()
+
+autocmd VimEnter * NERDTree
