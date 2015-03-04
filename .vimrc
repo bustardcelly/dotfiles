@@ -120,11 +120,17 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" jsx support
+let g:jsx_ext_required = 0
+
 call plug#begin()
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 Plug 'scrooloose/syntastic'
 Plug 'flazz/vim-colorschemes'
+Plug 'kien/ctrlp.vim'
+Plug 'bling/vim-airline'
 call plug#end()
 
 autocmd VimEnter * NERDTree
