@@ -1,6 +1,7 @@
 " Use the Solarized Dark theme
+set t_C0=256
 set background=light
-colorscheme lucius
+colorscheme solarized
 let g:solarized_termtrans=1
 
 " Make Vim more useful
@@ -118,19 +119,29 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_w = 1
 
 " jsx support
 let g:jsx_ext_required = 0
 
 call plug#begin()
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'jelera/vim-javascript-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'scrooloose/syntastic'
 Plug 'flazz/vim-colorschemes'
 Plug 'kien/ctrlp.vim'
 Plug 'bling/vim-airline'
+Plug 'mileszs/ack.vim'
+Plug 'rking/ag.vim'
 call plug#end()
 
+" Turn NERDTree on by default whenever open vim
 autocmd VimEnter * NERDTree
+
+" Check for eslintrc file for syntax
+autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc', '.;') != '' ? ['eslint'] : ['standard']
+
+" Tabbing in JS
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
