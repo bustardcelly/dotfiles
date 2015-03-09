@@ -1,6 +1,6 @@
 " Use the Solarized Dark theme
 set t_C0=256
-set background=light
+set background=dark
 colorscheme solarized
 let g:solarized_termtrans=1
 
