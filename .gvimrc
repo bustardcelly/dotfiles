@@ -7,3 +7,5 @@ set guifont=Monaco:h14
 set guicursor=n:blinkon0
 " Better line-height
 set linespace=8
+" Set default MacVim size
+set lines=50 columns=240
