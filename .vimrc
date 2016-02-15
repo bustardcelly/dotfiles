@@ -137,6 +137,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'bling/vim-airline'
 Plug 'mileszs/ack.vim'
 Plug 'rking/ag.vim'
+Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
 " Turn NERDTree on by default whenever open vim
