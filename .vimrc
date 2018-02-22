@@ -3,7 +3,7 @@ set t_C0=256
 set background=dark
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
-colorscheme solarized
+colorscheme gruvbox
 let g:solarized_termcolors=256
 
 " Make Vim more useful
@@ -143,6 +143,7 @@ Plug 'bling/vim-airline'
 Plug 'mileszs/ack.vim'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 " Turn NERDTree on by default whenever open vim

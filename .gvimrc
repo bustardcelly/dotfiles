@@ -1,6 +1,7 @@
 " Use the Solarized Dark theme
-set background=light
-colorscheme solarized
+" set background=light
+" colorscheme solarized
+colorscheme gruvbox
 " Use 14pt Monaco
 set guifont=Monaco:h14
 " Don’t blink cursor in normal mode
