@@ -136,7 +136,8 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'jelera/vim-javascript-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
+Plug 'vim-syntastic/syntastic'
 Plug 'flazz/vim-colorschemes'
 Plug 'kien/ctrlp.vim'
 Plug 'bling/vim-airline'
@@ -144,6 +145,7 @@ Plug 'mileszs/ack.vim'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'morhetz/gruvbox'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 " Turn NERDTree on by default whenever open vim
